@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Live Detect Object</string>
+    <string name="open_camera">Open Camera</string>
 </resources>
