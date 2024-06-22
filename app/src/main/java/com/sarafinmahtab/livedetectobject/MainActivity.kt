@@ -12,6 +12,7 @@ import com.sarafinmahtab.livedetectobject.ui.start.StartScreen
 import com.sarafinmahtab.livedetectobject.ui.theme.LiveObjectDetectTheme
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,17 +20,7 @@ class MainActivity : ComponentActivity() {
             val navController = rememberNavController()
 
             LiveObjectDetectTheme {
-                NavHost(
-                    navController = navController,
-                    startDestination = "start",
-                ) {
-                    composable("start") {
-                        StartScreen(navController)
-                    }
-                    composable("camera") {
-                        CameraScreen(navController)
-                    }
-                }
+                Navigation(navController = navController)
             }
         }
     }

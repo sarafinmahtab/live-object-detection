@@ -1,8 +1,15 @@
 <resources>
     <string name="app_name">Live Detect Object</string>
+
+    <string name="start">Start</string>
+    <string name="camera">Camera</string>
+
     <string name="open_camera">Open Camera</string>
     <string name="confirm">Confirm</string>
     <string name="dismiss">Dismiss</string>
     <string name="camera_permission_required_title">Permission Required</string>
     <string name="camera_permission_required_details">The camera is important for this app. Please grant the permission.</string>
+
+    <string name="camera_permission_denied_details">The camera permission is denied. If you want to allow it, please go to the app settings and change the camera permission.</string>
+    <string name="app_settings">App Settings</string>
 </resources>
