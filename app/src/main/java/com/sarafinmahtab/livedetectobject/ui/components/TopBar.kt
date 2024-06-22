@@ -7,6 +7,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -20,11 +21,14 @@ import com.sarafinmahtab.livedetectobject.ui.theme.LiveObjectDetectTheme
 @Composable
 fun AppBar() {
     TopAppBar(
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = MaterialTheme.colorScheme.surface,
+        ),
         navigationIcon = {
             Icon(
                 modifier = Modifier
                     .padding(12.dp)
-                    .size(36.dp),
+                    .size(32.dp),
                 painter = painterResource(id = R.drawable.ic_app_logo),
                 contentDescription = "App Logo",
                 tint = MaterialTheme.colorScheme.primary,
@@ -34,6 +38,7 @@ fun AppBar() {
             Text(
                 text = stringResource(id = R.string.app_name),
                 style = MaterialTheme.typography.titleLarge,
+                color = MaterialTheme.colorScheme.onSurface,
             )
         },
     )
